@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :airlines, param: :slug
-      resources :reviews, only: [:create, :destroy]
+      resources :reviews, param: :slug, only: [:show, :create, :destroy]
       #this is how to determine CRUD actions
     end
   end
